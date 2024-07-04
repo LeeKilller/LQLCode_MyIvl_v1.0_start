@@ -1,0 +1,431 @@
+<ela_sig>
+    <wire>
+        wire name is a
+        wire portype is 2
+    </wire>
+    <wire>
+        wire name is b
+        wire portype is 2
+    </wire>
+    <wire>
+        wire name is c
+        wire portype is 2
+    </wire>
+    <wire>
+        wire name is d
+        wire portype is 2
+    </wire>
+    <wire>
+        wire name is e
+        wire portype is 2
+    </wire>
+    <wire>
+        wire name is q
+        wire portype is 3
+    </wire>
+    <wire>
+        wire name is sum1
+        wire portype is 0
+    </wire>
+    <wire>
+        wire name is sum2
+        wire portype is 0
+    </wire>
+    <wire>
+        wire name is sum3
+        wire portype is 0
+    </wire>
+    <port>
+        port name is a
+        port name is a
+        port in_out_type is
+    </port>
+    <port>
+        port name is b
+        port name is b
+        port in_out_type is
+    </port>
+    <port>
+        port name is c
+        port name is c
+        port in_out_type is
+    </port>
+    <port>
+        port name is d
+        port name is d
+        port in_out_type is
+    </port>
+    <port>
+        port name is e
+        port name is e
+        port in_out_type is
+    </port>
+    <port>
+        port name is q
+        port name is q
+        port in_out_type is
+    </port>
+</ela_sig>
+<elaborate_gate>
+    <each_gate>
+        <ela_exp>
+            Enter ident branch
+            Final exp is sum1
+        </ela_exp>
+        str_finalout is sum1
+        <ela_exp>
+            Enter binary branch
+            <ela_exp>
+                Enter binary branch
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is a
+                </ela_exp>
+                str_left is a
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is b
+                </ela_exp>
+                str_right is b
+                 
+                cell $1 was inserted
+            </ela_exp>
+            str_left is a+b
+            <ela_exp>
+                Enter ident branch
+                Final exp is c
+            </ela_exp>
+            str_right is c
+            strname is a+b+c
+            cell $2 was inserted
+            left meet the same
+            real name is a+b
+            name is
+            num is 1
+        </ela_exp>
+        str_allright is a+b+c
+    </each_gate>
+    <each_gate>
+        <ela_exp>
+            Enter ident branch
+            Final exp is sum2
+        </ela_exp>
+        str_finalout is sum2
+        <ela_exp>
+            Enter binary branch
+            <ela_exp>
+                Enter binary branch
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is a
+                </ela_exp>
+                str_left is a
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is b
+                </ela_exp>
+                str_right is b
+                strname is a+b
+                meet the same
+                <wire>
+                    temp
+                    wire name is temp1
+                    wire portype is 0
+                </wire>
+                find one, name is $1
+                str_left is a+b
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is d
+                </ela_exp>
+                str_right is d
+                strname is a+b+d
+                cell $3 was inserted
+                left meet the same
+                real name is a+b
+                name is temp1
+                num is 2
+            </ela_exp>
+            str_allright is a+b+d
+    </each_gate>
+    <each_gate>
+        <ela_exp>
+            Enter ident branch
+            Final exp is sum3
+        </ela_exp>
+        str_finalout is sum3
+        <ela_exp>
+            Enter binary branch
+            <ela_exp>
+                Enter binary branch
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is a
+                </ela_exp>
+                str_left is a
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is b
+                </ela_exp>
+                str_right is b
+                strname is a+b
+                meet the same
+                str_left is a+b
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is e
+                </ela_exp>
+                str_right is e
+                strname is a+b+e
+                cell $4 was inserted
+                left meet the same
+                real name is a+b
+                name is temp1
+                num is 2
+            </ela_exp>
+            str_allright is a+b+e
+    </each_gate>
+    <each_gate>
+        <ela_exp>
+            Enter ident branch
+            Final exp is q
+        </ela_exp>
+        str_finalout is q
+        <ela_exp>
+            Enter binary branch
+            <ela_exp>
+                Enter binary branch
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is sum1
+                </ela_exp>
+                str_left is sum1
+                <ela_exp>
+                    Enter ident branch
+                    Final exp is sum2
+                </ela_exp>
+                str_right is sum2
+                strname is sum1&sum2
+                cell $5 was inserted
+            </ela_exp>
+            str_left is sum1&sum2
+            <ela_exp>
+                Enter ident branch
+                Final exp is sum3
+            </ela_exp>
+            str_right is sum3
+            strname is sum1&sum2&sum3
+            cell $6 was inserted
+            left meet the same
+            real name is sum1&sum2
+            name is
+            num is 1
+        </ela_exp>
+        str_allright is sum1&sum2&sum3
+    </each_gate>
+</elaborate_gate>
+SHOW NETLIST...........to be implemented
+<show_netlist>
+    <get_wire>
+        n is 2
+        shape is octagon
+        label is a
+        2 is source
+        n is 3
+        shape is octagon
+        label is b
+        3 is source
+        n is 4
+        shape is octagon
+        label is c
+        4 is source
+        n is 5
+        shape is octagon
+        label is d
+        5 is source
+        n is 6
+        shape is octagon
+        label is e
+        6 is source
+        n is 7
+        shape is octagon
+        label is q
+        7 is sink
+        n is 8
+        shape is diamond
+        label is sum1
+        n is 9
+        shape is diamond
+        label is sum2
+        n is 10
+        shape is diamond
+        label is sum3
+        n is 11
+        shape is diamond
+        label is temp1
+    </get_wire>
+    <get_cell>
+        <$1_cell>
+            A
+            is 0
+            B
+            is 0
+            Y
+            is not 0
+            in label p12 A
+            in label p13 B
+            out label p14 Y
+            label_str {{<p12> A|<p13> B}|$1\n$+|{<p14> Y}}
+                        <get_connect>
+                            protname c15:p12
+                            conn first a
+                            net n2
+                            protname c15:p13
+                            conn first b
+                            net n3
+                            protname c15:p14
+                            conn first temp1
+                            net n11
+                        </get_connect>
+        </$1_cell>
+        <$2_cell>
+            A
+            is 0
+            Y
+            is not 0
+            B
+            is 0
+            Y
+            is not 0
+            in label p12 A
+            in label p13 B
+            out label p14 Y
+            out label p14 Y
+            label_str {{<p12> A|<p13> B}|$2\n$+|{<p14> Y|<p14> Y}}
+                            <get_connect>
+                                protname c16:p12
+                                conn first
+                                net n17
+                                protname c16:p14
+                                conn first a+b+c
+                                net n18
+                                protname c16:p13
+                                conn first c
+                                net n4
+                                protname c16:p14
+                                conn first sum1
+                                net n8
+                            </get_connect>
+        </$2_cell>
+        <$3_cell>
+            Y
+            is not 0
+            B
+            is 0
+            Y
+            is not 0
+            A
+            is 0
+            in label p13 B
+            in label p12 A
+            out label p14 Y
+            out label p14 Y
+            label_str {{<p13> B|<p12> A}|$3\n$+|{<p14> Y|<p14> Y}}
+                            <get_connect>
+                                protname c19:p14
+                                conn first a+b+d
+                                net n20
+                                protname c19:p13
+                                conn first d
+                                net n5
+                                protname c19:p14
+                                conn first sum2
+                                net n9
+                                protname c19:p12
+                                conn first temp1
+                                net n11
+                            </get_connect>
+        </$3_cell>
+        <$4_cell>
+            Y
+            is not 0
+            B
+            is 0
+            Y
+            is not 0
+            A
+            is 0
+            in label p13 B
+            in label p12 A
+            out label p14 Y
+            out label p14 Y
+            label_str {{<p13> B|<p12> A}|$4\n$+|{<p14> Y|<p14> Y}}
+                            <get_connect>
+                                protname c21:p14
+                                conn first a+b+e
+                                net n22
+                                protname c21:p13
+                                conn first e
+                                net n6
+                                protname c21:p14
+                                conn first sum3
+                                net n10
+                                protname c21:p12
+                                conn first temp1
+                                net n11
+                            </get_connect>
+        </$4_cell>
+        <$5_cell>
+            A
+            is 0
+            Y
+            is not 0
+            B
+            is 0
+            in label p12 A
+            in label p13 B
+            out label p14 Y
+            label_str {{<p12> A|<p13> B}|$5\n$&|{<p14> Y}}
+                        <get_connect>
+                            protname c23:p12
+                            conn first sum1
+                            net n8
+                            protname c23:p14
+                            conn first sum1&sum2
+                            net n24
+                            protname c23:p13
+                            conn first sum2
+                            net n9
+                        </get_connect>
+        </$5_cell>
+        <$6_cell>
+            A
+            is 0
+            Y
+            is not 0
+            Y
+            is not 0
+            B
+            is 0
+            in label p12 A
+            in label p13 B
+            out label p14 Y
+            out label p14 Y
+            label_str {{<p12> A|<p13> B}|$6\n$&|{<p14> Y|<p14> Y}}
+                            <get_connect>
+                                protname c25:p12
+                                conn first
+                                net n17
+                                protname c25:p14
+                                conn first q
+                                net n7
+                                protname c25:p14
+                                conn first sum1&sum2&sum3
+                                net n26
+                                protname c25:p13
+                                conn first sum3
+                                net n10
+                            </get_connect>
+        </$6_cell>
+    </get_cell>
+</show_netlist>
