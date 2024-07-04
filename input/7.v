@@ -1,9 +1,8 @@
 module op_exp0(a,b,c,d,e,q);
 input a,b,c,d,e;
 output q;
-wire sum1,sum2,sum3;
-assign sum1 = c + b * a;
-assign sum2 = d + b * a;
-assign sum3 = e + b * a;
+wire sum1,sum2;
+assign sum1 = a + b + c;
+assign sum2 = b + c + d;
 assign q = sum1 & sum2 & sum3;
 endmodule

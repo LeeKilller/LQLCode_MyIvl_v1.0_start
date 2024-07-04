@@ -1,7 +1,7 @@
 module op_exp0(a,b,c,d,e,q);
 input a,b,c,d,e;
 output q;
-wire sum1,sum2;
+wire sum1,sum2,sum3;
 assign sum1 = a * b * c;
 assign sum2 = a * b + d;
 assign sum3 = a * b - e;
