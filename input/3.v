@@ -1,5 +1,6 @@
-module add0 (a,b,c,q);
-input a,b,c;
+
+module add0 (a,b,q);
+input a,b;
 output q;
-assign q = a + b + c ;
+assign q = a & b ;
 endmodule

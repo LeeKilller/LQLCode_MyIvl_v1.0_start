@@ -199,8 +199,15 @@ string  MyModule::elaborate_expression(PExpr* expr)
 			//}
 			else 
 				cell.cell_conns.insert({ str_left, port1 });
-			
-			cell.cell_conns.insert({ str_right, port2 });
+			if (m_mids.count(str_right) > 0 && m_mids[str_right].number > 1) {
+				cout << "left meet the same" << endl;
+				cout << "real name is " << str_right << endl;
+				cout << "name is " << m_mids[str_right].trans_name << endl;
+				cout << "num is " << m_mids[str_right].number << endl;
+				cell.cell_conns.insert({ m_mids[str_right].trans_name, port2 });
+			}
+			else
+				cell.cell_conns.insert({ str_right, port2 });
 			cell.cell_conns.insert({ strname, port3 });
 			m_cells.push_back(cell);
 
